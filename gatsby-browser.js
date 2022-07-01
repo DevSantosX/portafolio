@@ -1,1 +1,6 @@
-import './src/styles/global.css'
+require('./src/styles/global.css');
+
+const React =  require('react');
+const Layout = require('./src/components/Layout.jsx').default;
+
+module.exports.wrapRootElement = ({element}) => <Layout>{ element }</Layout>
