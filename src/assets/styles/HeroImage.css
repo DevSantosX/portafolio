@@ -1,0 +1,36 @@
+
+.hero__img {
+    height: 75vh;
+    background: url('../img/christopher-gower-m_HRfLhgABo-unsplash.jpg'), rgba(0,0,0,1);
+    background-color: rgba(50, 50, 50, 1);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__img-container {
+    @apply flex items-center justify-center min-h-full flex-col;
+}
+
+.hero__img-content {
+    @apply text-center text-white max-w-[1024px] px-3;
+    
+}
+
+.hero__title {
+    @apply text-4xl font-semibold;
+    text-shadow: 0px 0px 6px #000;
+}
+
+.hero__name {
+    @apply text-5xl font-semibold;
+    text-shadow: 0px 0px 6px #000;
+}
+
+.hero__btnContacto {
+    @apply w-full flex items-center justify-center my-[3em] flex-col
+}
+
+.hero__p {
+    @apply text-blue-600 font-semibold my-[4em]
+}

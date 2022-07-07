@@ -1,0 +1,7 @@
+.profile__avatar {
+    @apply h-[200px] w-[200px] rounded-full border-4 border-white overflow-hidden mb-[1em]
+}
+
+.profile__avatar-img {
+    @apply w-full h-full bg-cover
+}

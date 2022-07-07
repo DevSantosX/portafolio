@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Header.css';
+import '../assets/styles/Header.css';
 import { HiMenu } from "react-icons/hi";
 import { FaWindowClose } from "react-icons/fa";
 const Header = () => {
