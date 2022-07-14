@@ -1,0 +1,70 @@
+@import '../mixins/bar-animation.scss';
+
+.skills {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    h1 {
+      font-size: $h2;
+    }
+  }
+  &__item {
+    width: 550px;
+    display: flex;
+    position: relative;
+    &-lb {
+      width: 40px;
+      height: 40px;
+      margin-right: .5em;
+    }
+    &-bar {
+      width: 100%;
+      height: 25px;
+      border: 1px solid $first-color;
+      border-radius: .25em;
+      position: relative;
+      top: .15em;
+      div {
+        position: relative;
+        background-color: $first-color;
+        width: 0;
+        height: 100%;
+      }
+    }
+    &-tag {
+      width: 70px;
+      text-align: end;
+    }
+  }
+}
+
+@include bar-animation('html', 100%);
+@include bar-animation('css', 70%);
+@include bar-animation('sass', 70%);
+@include bar-animation('javascript', 80%);
+@include bar-animation('node', 50%);
+@include bar-animation('react', 70%);
+@include bar-animation('gatsby', 80%);
+@include bar-animation('express', 90%);
+@include bar-animation('vue', 30%);
+@include bar-animation('docker', 90%);
+
+@media screen and (max-width: 960px) {
+  .skills {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills {
+    width: 100%;
+  }
+}
+
+
+
+

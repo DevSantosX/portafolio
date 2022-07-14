@@ -1,0 +1,10 @@
+@mixin bar-animation ($skill, $porcent) {
+  #skill-#{$skill} > .skills__item-bar > div{
+    animation: #{$skill}-bar 2s forwards;
+  }
+  @keyframes #{$skill}-bar {
+    100% {
+      width: $porcent;
+    }
+  }
+}

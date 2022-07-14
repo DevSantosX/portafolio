@@ -14,7 +14,7 @@
 
   &__menu {
     text-align: center;
-    font-size: 1.75em;
+    font-size: $h3;
     z-index: 50;
     color: $white-color;
     width: 100%;
@@ -47,7 +47,7 @@
     }
 
     &-show {
-      transform: translateY(-265px);
+      transform: translateY(-233px);
       opacity: 1;
       transition: all 700ms ease-in-out;
     }

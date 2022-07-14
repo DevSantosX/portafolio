@@ -1,0 +1,17 @@
+@mixin space-x ($space) {
+  > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc($space * var(--tw-space-x-reverse));
+    margin-left: calc($space * calc(1 - var(--tw-space-x-reverse)));
+  }
+  
+}
+
+
+@mixin space-y ($space) {
+  > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc($space * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc($space * var(--tw-space-y-reverse));
+  }
+}

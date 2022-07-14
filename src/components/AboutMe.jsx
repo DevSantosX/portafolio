@@ -1,11 +1,18 @@
 import React from 'react';
 import Speed from '../assets/img/speed-test.svg';
+import Me from '../assets/img/avatar.jpg';
+import Skills from './Skills';
+
+
 
 const AboutMe = () => {
   return (
     <div className='about'>
       <div className="about__container">
         <div className="about__content">
+          <div className='about__title'>
+            <h1>About</h1>
+          </div>
           <div className="about__specialties">
             <div>
               <div className='card__icon'>
@@ -45,11 +52,16 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="about__me">
-            <div className="about__me-profile">
-              <img className='about__me-img'/>
+            <div className='about__me-content'>
+              <div className="about__me-profile">
+                <img className='about__me-img' src={Me} alt='me'/>
+              </div>
+              <div className='about__me-text'>
+                <p>Soy desarrollador full-stack creo paginas web estáticas, dinámicas y aplicaciones web, todos los días trato de aprender algo nuevo aplicarlo y enseñarlo.</p>
+              </div>
             </div>
+            <Skills/>
           </div>
-          <div className="about__skills"></div>
         </div>
       </div>
     </div>
