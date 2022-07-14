@@ -1,0 +1,14 @@
+@import '../mixins/margin-padding.scss';
+.btn {
+  display: block;
+  border-radius: .25em;
+  background-color: $third-color;
+  @include py(.25em, .25em);
+  @include px(.75em,.75em);
+  color: $white-color;
+  font-size: 1.5em;
+  &:hover {
+    background-color: $third-alpha-color;
+    transition: all 100ms ease;
+  }
+}

@@ -1,0 +1,40 @@
+@import '../mixins/octagono.scss';
+
+.card__icon {
+  @include octagono(150px, $first-color)
+}
+
+.about {
+  margin-top: 2em;
+  &__specialties {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    gap: 1em;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+    }
+    h3 {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+  }
+  &__me {
+    &-profile {
+      @include octagono(300px, $first-color);
+    }
+    &-img {
+      @include octagono(300px, transparent);
+      background-image: url('../img/avatar.jpg');
+      z-index: 30;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import '../mixins/margin-padding';
+
+.nav-mobile {
+  margin-bottom: 1em;
+  background-color: $first-color;
+  z-index: 20;
+  &__btn {
+    background-color: $first-color;
+    display: flex;
+    font-size: 2.125em;
+    margin-right: 1em;
+    z-index: 70;
+  }
+
+  &__menu {
+    text-align: center;
+    font-size: 1.75em;
+    z-index: 50;
+    color: $white-color;
+    width: 100%;
+    position: absolute;
+    transform: translateY(204px);
+    transition: all 500ms ease-in-out;
+    opacity: 0;
+    left: 0;
+    background-color: $first-color;
+
+    &-content {
+      display: block;
+      width: 100%;
+      ul li {
+        display: block;
+        width: 100%;
+        text-transform: capitalize;
+        height: 1.6em;
+
+        &:hover {
+          background-color: $white-color;
+          cursor: pointer;
+          color: $first-color;
+          text-transform: capitalize;
+          font-weight: 700;
+          transition: all 100ms ease;
+          z-index: 50;
+        }
+      }
+    }
+
+    &-show {
+      transform: translateY(-265px);
+      opacity: 1;
+      transition: all 700ms ease-in-out;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import avatar from '../assets/img/avatar.jpg';
-import '../assets/styles/ProfileAvatar.css';
 
 const ProfileAvatar = () => {
     return (

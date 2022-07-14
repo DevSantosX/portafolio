@@ -1,5 +1,4 @@
 import React from 'react';
-import '../assets/styles/Iconslinks.css';
 
 const Iconslinks = ({ icon, link, alt}) => {
     return (

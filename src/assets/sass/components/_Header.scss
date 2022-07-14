@@ -1,0 +1,33 @@
+@import '../mixins/margin-padding.scss';
+
+.header {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  flex-direction: column-reverse;
+  height: 3em;
+  background-color: $first-color;
+  color: $white-color;
+  z-index: 90;
+
+  &__brand {
+    z-index: 90;
+    @include py(0em, 0em);
+    @include my(0em, 0em);
+
+    h1 {
+      font-size: 2em;
+      margin-left: .5em;
+      font-weight: 600;
+      @include py(0,0);
+      margin-bottom: .5em;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+  }
+}

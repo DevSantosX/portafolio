@@ -1,0 +1,32 @@
+
+.speed-icon {
+  -webkit-mask: url('../img/speed-test.svg') no-repeat 100% 100%;
+  background: $white-color;
+  height: 50%;
+  width: 50%;
+  margin-bottom: 1em;
+}
+
+.responsive-icon {
+  -webkit-mask: url('../img/desktop-mobile.svg') no-repeat 100% 100%;
+  background: $white-color;
+  height: 50%;
+  width: 50%;
+  margin-bottom: 1em;
+}
+
+.intuitive-icon {
+  -webkit-mask: url('../img/head-idea.svg') no-repeat 100% 100%;
+  background: $white-color;
+  height: 50%;
+  width: 50%;
+  margin-bottom: 1em;
+}
+
+.dynamic-icon {
+  -webkit-mask: url('../img/startup-rocket-launch.svg') no-repeat 100% 100%;
+  background: $white-color;
+  height: 50%;
+  width: 50%;
+  margin-bottom: 1em;
+}

@@ -1,0 +1,27 @@
+/* -------------------------------------------------------------------------- */
+/*                               Margins Mixins                               */
+/* -------------------------------------------------------------------------- */
+
+@mixin my($top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin mx($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Paddings Mixins                              */
+/* -------------------------------------------------------------------------- */
+
+@mixin py($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin px($left, $right) {
+  padding-left: $left;
+  padding-right: $right;
+}

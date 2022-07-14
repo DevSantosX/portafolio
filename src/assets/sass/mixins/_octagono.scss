@@ -1,0 +1,36 @@
+
+@mixin octagono($size-octagono,  $color ) {
+  width: $size-octagono;
+  height: $size-octagono;
+  background: $color;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 0;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    border-bottom: calc($size-octagono / 3.3) solid $color;
+    border-left: calc($size-octagono / 3.3) solid white;
+    border-right: calc($size-octagono / 3.3) solid white;
+  }
+  &:after {
+    content: "";
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    border-top: calc($size-octagono / 3.3) solid $color;
+    border-left: calc($size-octagono / 3.3) solid white;
+    border-right: calc($size-octagono / 3.3) solid white;
+  }
+  &-img {
+    z-index: 30;
+  }
+}

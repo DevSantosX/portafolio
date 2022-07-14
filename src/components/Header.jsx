@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import '../assets/styles/Header.css';
-import { HiMenu } from "react-icons/hi";
-import { FaWindowClose } from "react-icons/fa";
+import React from 'react';
+import NavMobile from './NavMobile';
 const Header = () => {
-    const [menuShow, setMenuShow] = useState(false);
     return (
         <>
             <header className='header'>
@@ -20,20 +17,7 @@ const Header = () => {
                             <li>contacto</li>
                         </ul>
                     </nav> */}
-                    <div className='btn__menu-mobile'>
-                        {menuShow ?  <FaWindowClose onClick={() => setMenuShow(!menuShow)}/> : <HiMenu onClick={() => setMenuShow(!menuShow)}/> }
-                    </div>
-                    <div className={menuShow ? 'nav-mobile nav-mobile-show' : 'nav-mobile'}>
-                        <nav className='menu-mobile'>
-                            <ul>
-                                <li>blog</li>
-                                <li>portafolio</li>
-                                <li>tutoriales</li>
-                                <li>acerca de</li>
-                                <li>contacto</li>
-                            </ul>
-                        </nav>
-                    </div>
+                    <NavMobile/>
                 </div>
             </header>
         </>
