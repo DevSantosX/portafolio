@@ -12,7 +12,7 @@
     }
   }
   &__item {
-    width: 550px;
+    width: 475px;
     display: flex;
     position: relative;
     &-lb {
@@ -29,7 +29,7 @@
       top: .15em;
       div {
         position: relative;
-        background-color: $first-color;
+        background-image: linear-gradient(to right, $first-color, $first-alpha-color);
         width: 0;
         height: 100%;
       }
@@ -37,6 +37,8 @@
     &-tag {
       width: 70px;
       text-align: end;
+      color: $first-color;
+      font-weight: 600;
     }
   }
 }
@@ -56,12 +58,19 @@
   .skills {
     width: 100%;
     margin: 0 auto;
+    &__item {
+      width: 400px;
+    }
   }
 }
 
 @media screen and (max-width: 480px) {
   .skills {
     width: 100%;
+    &__item {
+      width: 295px;
+      max-width: 350px;
+    }
   }
 }
 

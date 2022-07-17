@@ -1,0 +1,21 @@
+@mixin title-decoration {
+  font-size: $h1;
+  position: relative;
+  display: inline-block;
+  &:after , &::before {
+    content: "";
+    background-color: currentColor;
+    height: 3px;
+    width: 120px;
+    position: absolute;
+    top: .85em;
+  }
+
+  &::before {
+    left: -140px;
+  }
+
+  &::after {
+    right: -140px;
+  }
+}

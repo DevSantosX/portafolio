@@ -1,5 +1,4 @@
 import React from 'react';
-import Speed from '../assets/img/speed-test.svg';
 import Me from '../assets/img/avatar.jpg';
 import Skills from './Skills';
 

@@ -1,0 +1,111 @@
+@import '../mixins/title-decoration.scss';
+
+.contact {
+  overflow: hidden;
+  background-color: $first-color;
+  color: $white-color;
+  &__title{
+    text-align: center;
+    h1 {
+      @include title-decoration
+    }
+  }
+
+  //Contacto
+  &__form {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+    display: grid;
+    gap: .5em;
+    grid-template-columns: repeat(2, 1fr);
+    & > * {
+      padding: 0.5rem;
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+    }
+    input, textarea {
+      color: $gray-color;
+      font-size: 0.85rem;
+      outline: none;
+      padding-left: 1em;
+    }
+
+    input {
+      border: 0;
+      border-bottom: thin solid $white-color;
+    }
+
+    textarea {
+      border: thin solid $white-color;
+      resize: none;
+      width: 100%;
+      grid-column:span 2;
+    }
+
+    button {
+      grid-row: 3;
+      grid-column: span 2;
+      margin-top: 0;
+      cursor: pointer;
+      border: 2px solid $white-color;
+      transition: all 0.5s ease-out;
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+    *::placeholder {
+      color: $gray-alpha-color;
+    }
+  }
+}
+
+.form-name {
+  opacity: 0;
+  transform: translateX(-400px);
+  transition: all 500ms ease-in;
+}
+
+.form-mail {
+  opacity: 0;
+  transform: translateX(400px);
+  transition: all 500ms ease-in;
+}
+
+.form-msg {
+  opacity: 0;
+  transform: translateY(500px);
+  transition: all 500ms ease-in-out;
+}
+
+.form-send {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: all 500ms ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 960px){
+  .contact {
+    &__title{
+      h1 {
+        &:after , &::before {
+          width: 80px;
+        }
+  
+        &::before {
+          left: -100px;
+        }
+  
+        &::after {
+          right: -100px;
+        }
+      }
+    }
+  }
+}

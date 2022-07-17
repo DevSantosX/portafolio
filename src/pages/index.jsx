@@ -1,6 +1,8 @@
 import React from "react"
 import Heroimage from "../components/HeroImage";
 import AboutMe from "../components/AboutMe";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
@@ -9,6 +11,8 @@ export default function Home() {
       <div className="home__container">
         <div className="home__content">
           <AboutMe/>
+          <Projects/>
+          <Contact/>
         </div>
       </div>
     </>

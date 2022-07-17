@@ -1,33 +1,17 @@
 @import '../mixins/octagono.scss';
 @import '../mixins/space-xy.scss';
+@import '../mixins/title-decoration.scss';
 .card__icon {
   @include octagono(100px, $first-color)
 }
 
 .about {
-  margin: 2em;
+  margin: 2em auto;
+  max-width: 1224px;
   &__title{
     text-align: center;
     h1 {
-      font-size: $h1;
-      position: relative;
-      display: inline-block;
-      &:after , &::before {
-        content: "";
-        background-color: currentColor;
-        height: 3px;
-        width: 120px;
-        position: absolute;
-        top: .85em;
-      }
-
-      &::before {
-        left: -140px;
-      }
-
-      &::after {
-        right: -140px;
-      }
+      @include title-decoration
     }
   }
   &__specialties {

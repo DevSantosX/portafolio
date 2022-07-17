@@ -9,6 +9,7 @@ import NodeIcon from '../assets/img/node-js.svg';
 import CssIcon from '../assets/img/css.svg';
 import DockerIcon from '../assets/img/docker.svg';
 import SassIcon from '../assets/img/sass.svg';
+import HtmlIcon from '../assets/img/html.svg';
 
 const Skill = (props) => {
   const  {id, label, porcent} = props
@@ -27,7 +28,7 @@ const Skill = (props) => {
 }
 
 const skills = [
-  { id: "skill-html", label: ReactIcon, porcent: "100%" },
+  { id: "skill-html", label: HtmlIcon, porcent: "100%" },
   { id: "skill-css", label: CssIcon, porcent: "70%" },
   { id: "skill-sass", label: SassIcon, porcent: "70%" },
   { id: "skill-javascript", label: JavaScriptIcon, porcent: "80%" },
@@ -49,7 +50,7 @@ const Skills = () => {
         <div className="skills__content">
           <ul>
             {skills.map(item => {
-              return <Skill id={item.id} label={item.label} porcent={item.porcent}/>
+              return <Skill key={item.id} id={item.id} label={item.label} porcent={item.porcent}/>
             })}
           </ul>
         </div>

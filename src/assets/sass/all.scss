@@ -3,6 +3,7 @@
 /*                                Base de Reset                               */
 /* -------------------------------------------------------------------------- */
 @import './base.scss';
+@import './utils/containers.scss';
 @import './utils/Icons.scss';
 /* -------------------------------------------------------------------------- */
 /*                               Componentes                               */
@@ -13,6 +14,8 @@
 @import './components/MButton.scss';
 @import './components/AboutMe.scss';
 @import './components/Skills.scss';
+@import './components/Projects.scss';
+@import './components/Contact.scss';
 
 /* -------------------------------------------------------------------------- */
 /*                                   Paginas                                  */
