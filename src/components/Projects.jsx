@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import useObserver from '../hooks/useObserver';
 
+
 const Card = ({img, name, description, git, demo}) => {
   return (
     <div className="projects__card">

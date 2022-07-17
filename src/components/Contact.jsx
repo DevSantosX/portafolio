@@ -1,8 +1,29 @@
 import React, { useRef, useEffect, useState } from 'react';
 import useObserver from '../hooks/useObserver';
+import Loader from './Loader';
+import EmoIcon from '../assets/img/laugh.svg';
+
+const ModalThanks = ({ show}) => {
+  return (
+    <div className={show ? "modal" : 'modal modal-hidden'}>
+      <div className="modal__container">
+        <div className="modal__content">
+          <h2>Gracias por tu mensaje!</h2>
+          <img src={EmoIcon} width='100px' alt="" />
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const Contact = () => {
-  const name = useRef()
+  const form = useRef();
+  const name = useRef();
+  const email = useRef();
+  const msg = useRef();
+
+  const [showLoader, setShowLoader] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const  observador = new IntersectionObserver(entries => {
@@ -20,10 +41,46 @@ const Contact = () => {
       root: null,
       threshold: .5
     })
-    observador.observe(name.current);
+    observador.observe(form.current);
 
     return () => observador.disconnect()
   }, []);
+
+
+  const handleClickEnviar = (e) => {
+    e.preventDefault();
+    console.log(name.current.value);
+    setShowLoader(true);
+    fetch('https://formsubmit.co/ajax/ab42ca30211f5bf248f154f03d6c355e',{
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: name.current.value,
+        email: email.current.value,
+        message: msg.current.value
+      })
+    }).then(res => res.json())
+    .then(data => {
+      console.log(data.success)
+      setShowLoader(false);
+      if (data.success) {
+        setShowModal(true);
+        setTimeout(() => {
+          setShowModal(false);
+          name.current.value = '';
+          email.current.value = '';
+          msg.current.value = '';
+        }, 2000)
+      }
+    })
+    .catch(error => {
+      console.log(error);
+      setShowLoader(false)
+    });
+  }
 
   return (
     <div className='contact'>
@@ -33,15 +90,17 @@ const Contact = () => {
             <h1>Contact</h1>
           </div>
           <div className="contact__content">
-              <form ref={name} id="form-contact" className='contact__form'>
-                <input type="text" id='form-name' className='form-name' placeholder='Escribe tu nombre*' title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required name='form-name' />
-                <input type="text" id='form-mail' className='form-mail' placeholder='Escribe tu correo*' required name='form-mail' title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" />
-                <textarea className='form-msg' name="form-msg" id="form-msg" cols="30" rows="10" placeholder="Déjame tus comentarios *" required></textarea>
-                <button className='form-send' id="form-send" name="form-send">Enviar</button>
-              </form>
+              <div ref={form} id="form-contact" className='contact__form'>
+                <input ref={name} type="text" id='form-name' className='form-name' placeholder='Escribe tu nombre*' title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required name='form-name' />
+                <input ref={email} type="text" id='form-mail' className='form-mail' placeholder='Escribe tu correo*' required name='form-mail' title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" />
+                <textarea ref={msg} className='form-msg' name="form-msg" id="form-msg" cols="30" rows="10" placeholder="Déjame tus comentarios *" required></textarea>
+                <button onClick={(e) => handleClickEnviar(e)} className='form-send' id="form-send" name="form-send">Enviar</button>
+              </div>
           </div>
         </div>
       </div>
+      <ModalThanks show={showModal}/>
+      <Loader show={showLoader}/>
     </div>
   );
 }

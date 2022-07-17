@@ -107,5 +107,54 @@
         }
       }
     }
+    &__form {
+      grid-template-columns: repeat(1, 1fr);
+      textarea {
+        grid-column: span 1;
+      }
+      button {
+        grid-column: span 1;
+        grid-row: 4;
+      }
+    }
+  }
+}
+
+.modal {
+  width: 100%;
+  z-index: 888;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms ease-in-out;
+  &__container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__content {
+    background-color: $white-color;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    color: $gray-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border: dotted 5px rgba($third-color, 1);
+    h2 {
+      font-size: $h2;
+      width: 100%;
+    }
+  }
+  &-hidden {
+    display: none;
   }
 }
