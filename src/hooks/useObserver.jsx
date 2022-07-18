@@ -6,11 +6,12 @@ const useObserver = options => {
 
   const observer =  useRef(null);
 
-  observer.current = new IntersectionObserver(observerEntries => {
-    setEntries(observerEntries)
-  }, options);
+  
 
   useEffect(() => {
+    observer.current = new IntersectionObserver(observerEntries => {
+      setEntries(observerEntries)
+    }, options);
     const { current: currentObserver} = observer;
     currentObserver.disconnect();
     if (elements.length) {
