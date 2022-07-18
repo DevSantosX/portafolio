@@ -2,7 +2,8 @@
   "myInfo": {
     "username": "DevSantos",
     "fullname": "Pedro Ernesto Santos Diaz",
-    "description": "Soy desarrollador full-stack creo paginas web estáticas, dinámicas y aplicaciones web, todos los días trato de aprender algo nuevo aplicarlo y enseñarlo."
+    "description": "Soy desarrollador full-stack creo paginas web estáticas, dinámicas y aplicaciones web, todos los días trato de aprender algo nuevo aplicarlo y enseñarlo.",
+    "avatar": "../../avatar.jpg"
   },
   "about": {
     "offer": [

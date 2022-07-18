@@ -14,6 +14,7 @@ query MyData {
           username
           fullname
           description
+          avatar
         }
         about {
           offer {

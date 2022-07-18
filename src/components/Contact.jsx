@@ -1,7 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import useObserver from '../hooks/useObserver';
 import Loader from './Loader';
-import EmoIcon from '../assets/img/laugh.svg';
 
 const ModalThanks = ({ show}) => {
   return (
@@ -9,7 +7,7 @@ const ModalThanks = ({ show}) => {
       <div className="modal__container">
         <div className="modal__content">
           <h2>Gracias por tu mensaje!</h2>
-          <img src={EmoIcon} width='100px' alt="" />
+          <img src="../../laugh.svg" width='100px' alt="" />
         </div>
       </div>
     </div>
@@ -28,13 +26,12 @@ const Contact = () => {
   useEffect(() => {
     const  observador = new IntersectionObserver(entries => {
       if(entries[0].isIntersecting) {
-        console.log(entries[0].target.childNodes)
         for (let i=0; i < entries[0].target.childNodes.length; i++) {
-          console.log(entries[0].target.childNodes[i].classList.add("visible"))
+          entries[0].target.childNodes[i].classList.add("visible")
         }
       } else {
         for (let i=0; i < entries[0].target.childNodes.length; i++) {
-          console.log(entries[0].target.childNodes[i].classList.remove("visible"))
+          entries[0].target.childNodes[i].classList.remove("visible")
         }
       }
     },{
@@ -49,7 +46,6 @@ const Contact = () => {
 
   const handleClickEnviar = (e) => {
     e.preventDefault();
-    console.log(name.current.value);
     setShowLoader(true);
     fetch('https://formsubmit.co/ajax/0ca3e33e14c61dbcc67513e390cf6d7f',{
       method: 'POST',

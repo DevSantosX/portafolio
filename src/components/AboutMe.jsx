@@ -1,11 +1,9 @@
 import React from 'react';
-import Me from '../assets/img/avatar.jpg';
 import Skills from './Skills';
 
 
 
-const AboutMe = ({offer, description, fullname, skills}) => {
-  console.log(skills)
+const AboutMe = ({offer, description, fullname, skills, avatar}) => {
   return (
     <div id='about' className='about'>
       <div className="about__container">
@@ -16,7 +14,6 @@ const AboutMe = ({offer, description, fullname, skills}) => {
           <div className="about__specialties">
             {
               offer.map(el => {
-                console.log(el)
                 return (
                   <div key={el.title}>
                     <div className='card__icon'>
@@ -34,7 +31,7 @@ const AboutMe = ({offer, description, fullname, skills}) => {
           <div className="about__me">
             <div className='about__me-content'>
               <div className="about__me-profile">
-                <img className='about__me-img' src={Me} alt='me'/>
+                <img className='about__me-img' src={avatar} alt='me'/>
               </div>
               <div className='about__me-text'>
                 <h3>{fullname}</h3>
