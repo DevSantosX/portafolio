@@ -28,7 +28,7 @@
     &-content {
       display: block;
       width: 100%;
-      ul li {
+      ul li a{
         display: block;
         width: 100%;
         text-transform: capitalize;
@@ -47,9 +47,15 @@
     }
 
     &-show {
-      transform: translateY(-233px);
+      transform: translateY(-195px);
       opacity: 1;
       transition: all 700ms ease-in-out;
     }
+  }
+}
+
+@media screen and (min-width: 860px ) {
+  .nav-mobile {
+    display: none;
   }
 }

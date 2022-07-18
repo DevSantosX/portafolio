@@ -7,6 +7,14 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    'gatsby-plugin-sass'
+    'gatsby-plugin-sass',
+    'gatsby-transformer-json',
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'content',
+        path: `${__dirname}/src/content`
+      }
+    }
   ],
 }

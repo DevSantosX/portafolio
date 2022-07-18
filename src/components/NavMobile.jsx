@@ -14,11 +14,10 @@ const NavMobile = () => {
       <div className={menuShow ? 'nav-mobile__menu nav-mobile__menu-show' : 'nav-mobile__menu'}>
           <nav className='nav-mobile__menu-content'>
               <ul>
-                  <li>Home</li>
-                  <li>Acerca de</li>
-                  <li>Portafolio</li>
-                  <li>Blog</li>
-                  <li>Contacto</li>
+                  <li><a onClick={() => setMenuShow(!menuShow)} href="#home">Home</a></li>
+                  <li><a onClick={() => setMenuShow(!menuShow)} href="#about">Acerca de</a></li>
+                  <li><a onClick={() => setMenuShow(!menuShow)} href="#projects">Portafolio</a></li>
+                  <li><a onClick={() => setMenuShow(!menuShow)} href="#contact">Contacto</a></li>
               </ul>
           </nav>
       </div>

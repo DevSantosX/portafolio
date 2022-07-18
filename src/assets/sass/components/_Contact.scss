@@ -138,9 +138,9 @@
     align-items: center;
   }
   &__content {
+    border-radius: 1em;
     background-color: $white-color;
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
     height: 200px;
     color: $gray-color;
     display: flex;
@@ -149,6 +149,7 @@
     text-align: center;
     flex-direction: column;
     border: dotted 5px rgba($third-color, 1);
+    padding: 0 .5em;
     h2 {
       font-size: $h2;
       width: 100%;
@@ -156,5 +157,13 @@
   }
   &-hidden {
     display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal {
+    &__content {
+      width: 320px;
+    }
   }
 }

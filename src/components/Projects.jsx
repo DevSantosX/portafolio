@@ -2,19 +2,19 @@ import React, { useRef, useEffect, useState } from 'react';
 import useObserver from '../hooks/useObserver';
 
 
-const Card = ({img, name, description, git, demo}) => {
+const Card = ({thumbail, title, description, git, demo}) => {
   return (
     <div className="projects__card">
       <div className="projects__card-img">
-        <img src={img} alt={name} />
+        <img src={thumbail} alt={title} />
       </div>
       <div className="projects__card-description">
-        <h3>{name}</h3>
+        <h3>{title}</h3>
         <div>
           <p>{description}</p>
         </div>
-        {/* <a className='projects__card-demo' href={demo}>Demo</a>
-        <a className='projects__card-git' href={git}>Github</a> */}
+        {git && <a className='projects__card-demo' href={demo}>Demo</a> }
+        {demo && <a className='projects__card-git' href={git}>Github</a>}
       </div>
     </div>
   )
@@ -79,7 +79,7 @@ const cards = [
   }
 ]
 
-const Projects = () => {
+const Projects = ({projects}) => {
 
   const [observador, setElements, entries] = useObserver({
     threshold: .25
@@ -103,7 +103,7 @@ const Projects = () => {
   }, [])
 
   return (
-    <div className='projects'>
+    <div id='projects' className='projects'>
       <div className="container">
         <div className="content">
           <div className="projects__title">
@@ -111,8 +111,8 @@ const Projects = () => {
           </div>
           <div className="projects__content">
             {
-              cards.map(card => {
-                return <Card {...card} key={card.name} />
+              projects.map(card => {
+                return <Card {...card} key={card.title} />
               })
             }
           </div>

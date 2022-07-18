@@ -51,7 +51,7 @@ const Contact = () => {
     e.preventDefault();
     console.log(name.current.value);
     setShowLoader(true);
-    fetch('https://formsubmit.co/ajax/ab42ca30211f5bf248f154f03d6c355e',{
+    fetch('https://formsubmit.co/ajax/0ca3e33e14c61dbcc67513e390cf6d7f',{
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ const Contact = () => {
   }
 
   return (
-    <div className='contact'>
+    <div id='contact' className='contact'>
       <div className="container">
         <div className="content">
           <div className="contact__title">

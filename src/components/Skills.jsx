@@ -1,22 +1,11 @@
 import React from 'react';
 
-import ReactIcon from '../assets/img/react-js.svg';
-import VueIcon from '../assets/img/vue-js.svg';
-import ExpressIcon from '../assets/img/expressjs.svg';
-import GatsbyIcon from '../assets/img/gatsbyjs.svg';
-import JavaScriptIcon from '../assets/img/javascript-programming-language.svg';
-import NodeIcon from '../assets/img/node-js.svg';
-import CssIcon from '../assets/img/css.svg';
-import DockerIcon from '../assets/img/docker.svg';
-import SassIcon from '../assets/img/sass.svg';
-import HtmlIcon from '../assets/img/html.svg';
-
 const Skill = (props) => {
-  const  {id, label, porcent} = props
+  const  {title, label, porcent} = props
   return (
-    <li id={id} className='skills__item'>
+    <li id={title} className='skills__item'>
       <div className='skills__item-lb'>
-        <img src={label} alt="" />
+        <img src={label} alt={title} />
       </div>
 
       <div className='skills__item-bar'>
@@ -27,20 +16,9 @@ const Skill = (props) => {
   )
 }
 
-const skills = [
-  { id: "skill-html", label: HtmlIcon, porcent: "100%" },
-  { id: "skill-css", label: CssIcon, porcent: "70%" },
-  { id: "skill-sass", label: SassIcon, porcent: "70%" },
-  { id: "skill-javascript", label: JavaScriptIcon, porcent: "80%" },
-  { id: "skill-node", label: NodeIcon, porcent: "50%" },
-  { id: "skill-react", label: ReactIcon, porcent: "70%" },
-  { id: "skill-gatsby", label: GatsbyIcon, porcent: "80%" },
-  { id: "skill-express", label: ExpressIcon, porcent: "90%" },
-  { id: "skill-vue", label: VueIcon, porcent: "30%" },
-  { id: "skill-docker", label: DockerIcon, porcent: "90%" },
-]
 
-const Skills = () => {
+
+const Skills = ({ skills }) => {
   return (
     <>
       <div className="skills">
@@ -50,7 +28,7 @@ const Skills = () => {
         <div className="skills__content">
           <ul>
             {skills.map(item => {
-              return <Skill key={item.id} id={item.id} label={item.label} porcent={item.porcent}/>
+              return <Skill key={item.title} title={item.title} label={item.icon} porcent={item.porcent}/>
             })}
           </ul>
         </div>

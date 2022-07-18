@@ -8,15 +8,14 @@ const Header = () => {
                     <div className='header__brand'>
                         <h1>DevSantos</h1>
                     </div>
-                    {/* <nav className='nav'>
+                    <nav className='header__nav'>
                         <ul>
-                            <li>blog</li>
-                            <li>portafolio</li>
-                            <li>tutoriales</li>
-                            <li>acerca de</li>
-                            <li>contacto</li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">Acerca de</a></li>
+                            <li><a href="#projects">Portafolio</a></li>
+                            <li><a href="#contact">Contacto</a></li>
                         </ul>
-                    </nav> */}
+                    </nav>
                     <NavMobile/>
                 </div>
             </header>

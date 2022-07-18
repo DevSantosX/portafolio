@@ -1,0 +1,92 @@
+{
+  "myInfo": {
+    "username": "DevSantos",
+    "fullname": "Pedro Ernesto Santos Diaz",
+    "description": "Soy desarrollador full-stack creo paginas web estáticas, dinámicas y aplicaciones web, todos los días trato de aprender algo nuevo aplicarlo y enseñarlo."
+  },
+  "about": {
+    "offer": [
+      {
+        "title": "Rápido",
+        "description": "Tiempos de carga rápidos e interacción sin demoras, mi máxima prioridad.",
+        "icon":"speed-icon"
+      },
+      {
+        "title": "Responsivo",
+        "description": "Mis diseños funcionarán en cualquier dispositivo, grande o pequeño.",
+        "icon":"responsive-icon"
+      },
+      {
+        "title": "Intuitivo",
+        "description": "Fuerte preferencia por una UX/UI intuitiva y fácil de usar.",
+        "icon":"intuitive-icon"
+      },
+      {
+        "title": "Dinámico",
+        "description": "Los sitios web no tienen que ser estáticos, me encanta hacer que las páginas cobren vida.",
+        "icon":"dynamic-icon"
+      }
+    ],
+    "skills": [
+      {
+        "title": "skill-html",
+        "porcent": "100%",
+        "icon": "../../html.svg"
+      },
+      {
+        "title": "skill-css",
+        "porcent": "60%",
+        "icon": "../../css.svg"
+      },
+      {
+        "title": "skill-sass",
+        "porcent": "60%",
+        "icon": "../../sass.svg"
+      },
+      {
+        "title": "skill-javascript",
+        "porcent": "75%",
+        "icon": "../../javascript-programming-language.svg"
+      },
+      {
+        "title": "skill-node",
+        "porcent": "50%",
+        "icon": "../../node-js.svg"
+      },
+      {
+        "title": "skill-react",
+        "porcent": "70%",
+        "icon": "../../react-js.svg"
+      },
+      {
+        "title": "skill-gatsby",
+        "porcent": "80%",
+        "icon": "../../gatsbyjs.svg"
+      },
+      {
+        "title": "skill-express",
+        "porcent": "85%",
+        "icon": "../../expressjs.svg"
+      },
+      {
+        "title": "skill-vue",
+        "porcent": "30%",
+        "icon": "../../vue-js.svg"
+      },
+      {
+        "title": "skill-docker",
+        "porcent": "70%",
+        "icon": "../../docker.svg"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "proyecto 1",
+      "description": "este proyecto es de prueba",
+      "thumbail": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "git": "",
+      "demo": ""
+    }
+  ]
+}
